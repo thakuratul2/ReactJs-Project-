@@ -11,7 +11,7 @@ export default function Navbar(props) {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="/">Home</a>
+          <a className="nav-link active" aria-current="page" href="/">{props.homeTitle}</a>
         </li>
         <li className="nav-item">
           <a className="nav-link" href="/">About Us</a>
@@ -33,9 +33,11 @@ export default function Navbar(props) {
 }
 Navbar.propTypes={
   title: PropTypes.string.isRequired,
+  homeTitle: PropTypes.string.isRequired,
   contactTitle: PropTypes.string.isRequired
 }
 Navbar.defaultProps = {
     title: 'Set The Title',
+    homeTitle: 'Set nav link',
     contactTitle: 'Set Description'
 }
