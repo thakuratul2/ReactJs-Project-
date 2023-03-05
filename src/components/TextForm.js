@@ -1,11 +1,8 @@
 import React, { useState } from "react";
 
 export default function TextForm(props) {
-  const [myStyle, setMyStyle] = useState({
-    color: "black",
-    backgroundColor: "white",
-  });
-  const [btnText, setBtn] = useState("Enable Dark Mode");
+ 
+;
   const changeUpUpper = () => {
     //arrow function
     let newText = text.toUpperCase();
