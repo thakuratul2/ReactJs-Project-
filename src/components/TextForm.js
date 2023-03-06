@@ -7,6 +7,7 @@ export default function TextForm(props) {
     //arrow function
     let newText = text.toUpperCase();
     setText(newText);
+    props.showAlert("Change to Upper Case","success");
   };
   const changeText = (event) => {
     setText(event.target.value);
@@ -14,15 +15,18 @@ export default function TextForm(props) {
   function changeUpLower() {
     let newText = text.toLowerCase();
     setText(newText);
+    props.showAlert("Change to Lower Case","success");
   }
    const removeSpace = ()=>{
     let removeText = text.split(/[ ]+/);
     setText(removeText.join(" "));
+    props.showAlert("Spaces Removed","success");
    }
  
   const changeClearData = () => {
     let clearText = "";
     setText(clearText);
+    props.showAlert("Text Clear","success");
   };
 
   const [text, setText] = useState(""); //hook of useState
