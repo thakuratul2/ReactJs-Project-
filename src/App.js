@@ -1,9 +1,17 @@
 
 import './App.css';
 import Navbar from './components/Navbar';
-import TextForm from './components/TextForm';
+import Home from './components/Home';
 import React,{useState} from 'react';
 import Alert from './components/Alert';
+import About from './components/About';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
+
 
 
 
@@ -22,6 +30,7 @@ function showAlert(message,type){
 }
 
 
+
 function togglemode(){
   if(mode==='light'){
     setMode('dark');
@@ -36,11 +45,20 @@ function togglemode(){
 }
   return (
     <>
+    <Router>
       <Navbar title="React App[Atul Singh]" homeTitle="Home" contactTitle="Contact" mode={mode} enableMode ={togglemode}/>
       <Alert alert={alert}/>
       <div className="container my-5">
-        <TextForm showAlert={showAlert} heading="Enter the text"/>
+      <Routes>
+        <Route path='/about' element={<About/>}/>
+          
+        
+        <Route path='/home' element={<Home/>}/>
+      
+      </Routes>
+        
       </div>
+      </Router>
     </>
   );
 }
