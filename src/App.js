@@ -30,7 +30,7 @@ function togglemode(){
   }else{
     setMode('light');
     document.body.style.backgroundColor = 'white';
-    showAlert("Mode Disabled","success");
+    showAlert("Mode Disabled","danger");
   }
 
 }
