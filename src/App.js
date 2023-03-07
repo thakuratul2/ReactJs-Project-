@@ -4,13 +4,14 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import React,{useState} from 'react';
 import Alert from './components/Alert';
-import About from './components/About';
 import {
   BrowserRouter as Router,
   Routes,
   Route,
   Link
 } from "react-router-dom";
+import Contact from './Pages/Contact';
+import About from './Pages/About';
 
 
 
@@ -46,14 +47,15 @@ function togglemode(){
   return (
     <>
     <Router>
-      <Navbar title="React App[Atul Singh]" homeTitle="Home" contactTitle="Contact" mode={mode} enableMode ={togglemode}/>
+      <Navbar title="React App[Atul Singh]" mode={mode} enableMode ={togglemode}/>
       <Alert alert={alert}/>
       <div className="container my-5">
       <Routes>
         <Route path='/about' element={<About/>}/>
           
         
-        <Route path='/home' element={<Home/>}/>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/contact' element={<Contact/>}/>
       
       </Routes>
         
