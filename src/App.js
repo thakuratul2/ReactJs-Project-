@@ -8,7 +8,6 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link
 } from "react-router-dom";
 import Contact from './Pages/Contact';
 import About from './Pages/About';
